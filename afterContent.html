@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>伪类:after的content属性使用</title>
+    <style type="text/css">
+    .wrap:after{ 
+        content:"add"; 
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: url(bg3.jpg) 0px 0px no-repeat;
+        border-radius: 50px;
+        background-size: 100% 100%;
+    }
+    /* content 可以是字符串 */
+    .wrap:before{ 
+        content:attr(title); 
+    }
+    /* content 可以获取的元素属性 */
+    .wrap:after{
+       content:"";
+       display: block;
+       clear: both;
+     }
+     /* 解决内层浮动,导致外层div无高度,清浮动 */
+    .imgs{
+        float: left;
+    }
+    </style>
+</head>
+<body>
+<div class="wrap" title="before获取的content标题">
+    <img src="bg3.jpg" class="imgs">
+</div>
+</body>
+</html>
