@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D变换制作正方体</title>
+    <style type="text/css">
+    .square{
+        margin:200px;
+        position:relative;
+        width: 200px;
+        height: 200px;
+        -webkit-transform-style:preserve-3d;
+        transform-style:preserve-3d;
+        -webkit-perspective:600px;
+        perspective:600px;
+    }
+    .square>li{
+        position: absolute;
+        left:0;
+        top:0;
+        width: 200px;
+        height: 200px;
+        font-size:40px;
+        text-align: center;
+        list-style-type: none;
+        opacity: 0.5;
+    }
+    .square>li:nth-child(1){
+        background-color:pink;
+    }
+    .square>li:nth-child(2){
+        background-color:red;
+        -webkit-transform:translate3d(0,0,-200px) rotateY(180deg);
+        transform:translate3d(0,0,-200px) rotateY(180deg);
+    }
+     .square>li:nth-child(3){
+       background-color:green;
+       -webkit-transform: translate3d(100px,0px,-100px) rotateY(-90deg);
+       transform: translate3d(100px,0px,-100px) rotateY(-90deg);
+   }
+  
+   .square>li:nth-child(4){
+       background-color:blue;
+       -webkit-transform:translate3d(-100px,0px,-100px) rotateY(90deg);
+       transform:translate3d(-100px,0px,-100px) rotateY(90deg);
+   }
+    
+   .square>li:nth-child(5){
+       background-color:yellow;
+       -webkit-transform:translate3d(0px,-100px,-100px) rotateX(-90deg);
+       transform:translate3d(0px,-100px,-100px) rotateX(-90deg);
+   }
+   
+   .square>li:nth-child(6){
+       background-color:purple;
+       -webkit-transform:translate3d(0px,100px,-100px) rotateX(90deg);
+       transform:translate3d(0px,100px,-100px) rotateX(90deg);
+   } 
+    </style>
+</head>
+<body>
+<ul class="square">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+</body>
+</html>
