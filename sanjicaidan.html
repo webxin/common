@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<style>
+body,div,h1,h2,h3,h4,h5,h6,a,p,input,dl,dt,dd,img,ul,li,span{
+    margin:0;
+    padding:0;
+    }
+body{
+    font-size:12px;}
+
+img{
+    vertical-align:top;
+    border:none;
+    }
+ul,li{
+    list-style: none;
+    list-style-type: none;
+}
+a{
+    text-decoration:none;
+    color: #000;
+    }
+input,button,select,textarea{outline:none;border:none;};
+textarea{resize:none}
+
+
+.navbg{
+    background-color: #434a53;
+    height: 39px;
+    border-bottom: 1px solid #383f48;
+}
+.navcenter{
+    width:980px;
+    margin:0 auto;
+    font-size: 14px;
+}
+
+.top-nav li{
+    float: left;
+    width:89px;
+    line-height: 39px;
+    border-right: 1px solid  #383f48;
+    position: relative;
+}
+.top-nav  li.firstpage{
+    border-left: 1px solid  #383f48;
+    width:88px;
+}
+.top-nav  li a{
+    display: block;
+    line-height: 39px;
+    text-align: center;
+    color: #ffffff;
+}
+.top-nav  li a img{
+    margin-right: 5px;
+    margin-top: 10px;
+}
+/*以下one mouseover*/
+.top-nav li:hover{
+    background-color:#383f48;
+}
+/*二级隐藏*/
+.top-nav li ul{
+    display: none;
+    position: relative;
+    width: 140px;
+}
+.top-nav li ul li{
+    width: 140px;
+    line-height: 25px;
+    border: none;
+    background-color: #383f48;
+}
+.top-nav li ul li:hover{
+    background-color: #434A53;
+}
+.libg{
+    background: url(image/images/jiantou_03.png) 120px center no-repeat;
+}
+.navbg li ul li.libg:hover{
+    background:#434A53 url(image/images/jiantou_04.png) 120px center no-repeat;
+}
+/*一级经过，二级显示*/
+.top-nav li:hover ul{
+    display: block;
+}
+/*一级经过，三级隐藏*/
+.top-nav li:hover ul li ul{
+    display: none;
+}
+/*二级经过，三级显示*/
+.top-nav li ul li:hover ul{
+    display: block;
+    position:absolute;
+    left:140px;
+    top:0;
+    
+}
+/*三级经过*/
+.top-nav li ul li ul li:hover{
+    background-color: #ed5664;
+}      
+        </style>
+	</head>
+	<body>
+		<div class="navbg">
+			<div class="navcenter">
+				<ul class="top-nav" id="top-nav">
+					<li class="firstpage"><a href="#"><img src="image/navbiao.png" />首页</a></li>
+					<li><a href="#">广告管理</a></li>
+					<li><a href="#">资源管理</a>
+						<ul>
+							<li class="libg">
+								<a href="#">客户管理</a>
+								<ul>
+									<li><a href="#">三级菜单</a></li>
+									<li><a href="#">三级菜单</a></li>
+									<li><a href="#">三级菜单</a></li>
+									<li><a href="#">三级菜单</a></li>
+								</ul>
+							</li>
+							<li><a href="#">二级菜单</a></li>
+							<li class="libg">
+								<a href="#">客户管理</a>
+								<ul>
+									<li><a href="#">三级菜单</a></li>
+									<li><a href="#">三级菜单</a></li>
+									<li><a href="#">三级菜单</a></li>
+									<li><a href="#">三级菜单</a></li>
+								</ul>
+							</li>
+							<li><a href="#">二级菜单</a></li>
+						</ul>
+					</li>
+					<li ><a href="#">财务管理</a>
+						<ul>
+							<li class="libg">
+								<a href="#">客户管理</a>
+								<ul>
+									<li><a href="#">三级菜单</a></li>
+									<li><a href="#">三级菜单</a></li>
+									<li><a href="#">三级菜单</a></li>
+									<li><a href="#">三级菜单</a></li>
+								</ul>
+							</li >
+							<li><a href="#">二级菜单</a></li>
+							<li class="libg">
+								<a href="#">客户管理</a>
+								<ul>
+									<li><a href="#">三级菜单</a></li>
+									<li><a href="#">三级菜单</a></li>
+									<li><a href="#">三级菜单</a></li>
+									<li><a href="#">三级菜单</a></li>
+								</ul>
+							</li>
+							<li><a href="#">二级菜单</a></li>
+						</ul>
+					</li>
+					<li ><a href="#">新增账户</a></li>
+					<li ><a href="#">后台管理</a></li>
+					<li><a href="#">高级管理</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
