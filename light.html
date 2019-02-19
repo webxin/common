@@ -1,0 +1,112 @@
+<html><head>
+<meta charset="utf-8">
+<title></title>
+<style>
+.li_news{
+  @include absolute_l_t_z(12rem/$base,40rem/$base,20);
+  @include wh(30rem/$base,75rem/$base);
+}
+.li_light{
+  @include  wh(44rem/$base,44rem/$base);
+  img{
+    @include wh(2px,7px);
+    position:absolute;
+    left:22rem/$base;
+    top:0px;
+    transform-origin:0 22rem/$base;
+  }
+}
+.li_light_left_big{
+  position:relative;
+  left:50rem/$base;
+  top:50rem/$base;
+  z-index:20;
+  img{
+    opacity:0.8;
+  }
+}
+.li_light_left_small{
+  position:absolute;
+  left:50rem/$base;
+  top:50rem/$base;
+  z-index:21;
+  transform: scale(0.5);
+  img{
+    opacity:0.8;
+  }
+}
+.li_light_right_big{
+  @include wh(40px,40px);
+  position:absolute;
+  right:20rem/$base;
+  top:10rem/$base;
+  z-index:21;
+  opacity: 0.2;
+}
+@keyframes light_left_big{
+  0%{
+    transform:scale(0);
+  }
+  100%{
+    transform:scale(1.1);opacity: 0;
+  }
+}
+@keyframes light_left_small{
+  0%{
+    transform:scale(0);
+  }
+  100%{
+    transform:scale(0.6);opacity: 0;
+  }
+}
+.an_light_left_big{
+  animation: light_left_big 1200ms ease-out 200ms 400 normal;
+  animation-fill-mode:backwards;
+}
+.an_light_left_small{
+  animation: light_left_small 1200ms ease-out 200ms 400 normal;
+  animation-fill-mode:backwards;
+}
+
+@keyframes light_open{
+  0%{
+    transform:translateY(0);opacity: 0.4;
+  }
+  100%{
+    transform:translateY(-70px);opacity: 0;
+  }
+}
+.an_light_open{
+  animation: light_open 600ms linear 100ms 800 normal;
+  animation-fill-mode:backwards;
+}
+
+.li_light_open{
+    @include wh(2px,7px);
+    position:absolute;
+    left:70rem/$base;
+    top:150rem/$base;
+    opacity: 0;
+}
+</style>
+</head>
+<body>
+  <img src="../assets/images/list/li_news.png"  class="li_news"/>
+<div class="li_light li_light_left_big an_light_left_big">
+	<img src="../assets/images/list/li_light.png"  :style='"transform:rotate("+i*30+"deg)"' v-for="i in 12"/>
+</div>
+<div class="li_light li_light_left_small an_light_left_small">
+	<img src="../assets/images/list/li_light.png"  :style='"transform:rotate("+i*30+"deg)"' v-for="i in 12"/>
+</div>
+<img src="../assets/images/list/li_light.png"  class="li_light_open an_light_open" />
+<img src="../assets/images/list/li_fireworks.png" class="li_light_right_big"/>
+<script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.fireworks.js"></script>
+<script>
+</script>
+</body>
+</html>
+
+
+
+</body></html>
